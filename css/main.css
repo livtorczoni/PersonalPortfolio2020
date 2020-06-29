@@ -2,6 +2,7 @@
 Master Layout
 **************************************/
 body {
+
 }
 
 main {
@@ -44,7 +45,7 @@ html {
 	--size-xxxlarge: 4rem;
 	--size-xxlarge: 3.75rem;
 	--size-xlarge: 2rem;
-	--size-large: 1.75rem;
+	--size-large: 2rem;
 
 	--size-xmedium: 1.5rem;
 	--size-medium: 1.25rem;
@@ -63,7 +64,7 @@ h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-weight: 100;
+	font-weight: 400;
 	font-size: var(--size-xxxlarge);
 }
 
@@ -81,10 +82,11 @@ h1 {
 	}
 }
 
-@media ( min-width: 800px ) {
+@media ( min-width: 1500px ) {
 
 	h1 {
 		font-size: var(--size-xxxlarge);
+		font-weight: 400;
 	}
 }
 
@@ -108,8 +110,16 @@ h2 {
 	}
 }
 
+@media ( min-width: 800px ) {
+
+	h2 {
+		font-size: var(--size-xlarge);
+
+	}
+}
+
 h3 {
-	font-size: var(--size-large);
+	font-size: var(--size-xlarge);
 	font-weight: 100;
 }
 
@@ -120,20 +130,27 @@ h3 {
 	}
 }
 
-@media ( min-width: 800px ) {
+@media ( min-width: 600px ) {
 
 	h3 {
 		font-size: var(--size-large);
 	}
 }
 
+@media ( min-width: 800px ) {
+
+	h3 {
+		font-size: var(--size-xlarge);
+	}
+}
+
 h4 {
-	font-size: var(--size-xmedium);
+	font-size: var(--size-large);
 	font-weight: 100;
 }
 
 h5 {
-	font-size: var(--size-medium);
+	font-size: var(--size-xmedium);
 }
 
 h6 {
@@ -148,7 +165,7 @@ p {
 	color: var(--color-grey-light);
 }
 
-@media ( min-width: 1500px ) {
+@media ( min-width: 1600px ) {
 
 	p {
 		font-size: var(--size-medium);
@@ -190,12 +207,14 @@ Header Component
 		flex-direction: row;
 		justify-content: space-between;
 		margin: 2rem 0;
-		padding-left: 1rem;
-		padding-right: 1rem;
+		/* padding-left: 10vw;
+		padding-right: 10vw; */
 	}
 }
 
 .logo {
+
+	padding-left: 10vw;
 	font-family: 'Oswald', sans-serif;
 	font-size: var(--size-xlarge);
 	font-weight: 300;
@@ -218,6 +237,8 @@ Primary Navigation
 **************************************/
 
 .nav-site {
+	padding-left: 10vw;
+	padding-right: 10vw;
 	margin-top: 1.5rem;
 }
 
@@ -337,7 +358,7 @@ Portfolio Grid
 
 }
 
-@media ( min-width: 700px ) {
+@media ( min-width: 800px ) {
 	.work-grid {
 		grid-template-columns: 1fr 1fr;
 		padding-left: 2rem;
@@ -346,11 +367,11 @@ Portfolio Grid
 	}
 }
 
-@media ( min-width: 1500px ) {
+@media ( min-width: 1200px ) {
 	.work-grid {
-		padding-left: 7rem;
-		padding-right: 7rem;
-		grid-gap: 3rem;
+		padding-left: 9rem;
+		padding-right: 9rem;
+		grid-gap: 3.5rem;
 	}
 }
 
@@ -528,7 +549,7 @@ Hero Component
 
 	.hero .primary-button {
 		font-size: var(--size-xsmall);
-		padding: 1rem 1rem;
+		padding: 1rem 2rem;
 	}
 
 	.hero h1 {
@@ -547,21 +568,18 @@ Hero Component
 	.hero h1 {
 		font-weight: 400;
 		color: var(--color-grey);
-		font-size: var(--size-xlarge);
-		margin: 0 0 0 1rem;
+		margin: 0;
 	}
 }
 
-@media ( min-width: 745px ) {
-	.hero {	
-		grid-template-columns: 2fr 1fr;
-	}
+/* @media ( min-width: 800px ) {
+	
 
 	.hero .primary-button {
 		padding: .5rem 2rem;
 	}
 
-}
+} */
 
 @media ( min-width: 900px ) {
 
@@ -571,7 +589,7 @@ Hero Component
 	}
 
 	.hero h1 {
-		font-size: var(--size-large);
+		font-size: var(--size-xlarge);
 	}
 
 }
@@ -580,6 +598,8 @@ Hero Component
 	.hero {
 		margin-left: 8rem;
 		margin-right: 8rem;
+		margin-top: 5rem;
+		margin-bottom: 10rem;
 	}
 
 	.hero .primary-button {
@@ -591,8 +611,13 @@ Hero Component
 @media ( min-width: 1200px ) {
 
 	.hero {
+		grid-template-columns: 1fr 1fr;
 		margin-left: 8rem;
 		margin-right: 8rem;
+	}
+
+	.hero .text {
+		padding-left: 2rem;
 	}
 
 	.hero .primary-button {
@@ -600,18 +625,14 @@ Hero Component
 	}
 
 	.hero h1 {
-		font-size: var(--size-xlarge);
+		font-size: var(--size-xxlarge);
 	}
 }
 
 @media ( min-width: 1600px ) {
 
-	.hero h1 {
-		font-size: var(--size-xxxlarge);
-	}
-
 	.hero .primary-button {
-		font-size: var(--size-medium);
+		font-size: var(--size-small);
 	}
 }
 
@@ -655,14 +676,6 @@ About me page
 		font-size: var(--size-xxlarge);
 		margin-bottom: 0;
 	}
-}
-
-@media (min-width: 1500px ) {
-	.about-me {
-		padding-left: 15rem;
-		padding-right: 15rem;
-	}
-
 }
 
 
@@ -728,14 +741,17 @@ Resume
 	font-size: var(--size-large);
 }
 
-@media ( min-width: 800px ) {
+@media ( min-width: 790px ) {
 
 	.resume-grid {
 		display: grid;
-		grid-template-columns: 3fr 1fr;
+		grid-template-columns: 3fr 1.5fr;
 		grid-template-rows: repeat(3, 8rem);
-		grid-gap: 2rem;
-		margin-bottom: 25rem;
+		grid-gap: 2.5rem;
+		margin-bottom: 50rem;
+		padding-left: 10vw;
+		padding-right: 10vw;
+
 	}
 
 	.education {
@@ -760,8 +776,6 @@ Resume
 @media ( min-width: 1200px ) {
 
 	.resume-grid {
-		padding-left: 5rem;
-		padding-right: 5rem;
 		grid-template-rows: repeat(3, 8rem);
 	}
 }
@@ -769,8 +783,6 @@ Resume
 @media ( min-width: 1600px ) {
 
 	.resume-grid {
-		padding-left: 13rem;
-		padding-right: 13rem;
 		grid-template-rows: repeat(3, 10rem);
 	}
 }
@@ -843,8 +855,18 @@ Portfolio Item 1 - Nextbus
 		align-items: center;
 	}
 
+	.intro-content-grid {
+		padding-bottom: 2.8rem;
+		padding-top: 2rem;
+	}
+
+	.intro-content-grid h5 {
+		margin-bottom: 2px;
+	}
+
 	.col-2 {
-		font-size: var(--size-medium);
+		font-size: var(--size-small);
+		padding-left: 1rem;
 	}
 
 	.team-grid {
@@ -854,8 +876,8 @@ Portfolio Item 1 - Nextbus
 
 @media ( min-width: 900px ) {
 
-	.col-2 {
-		font-size: var(--size-xmedium);
+	.col-2 li{
+		font-size: var(--size-medium);
 	}
 
 	.team-grid {
